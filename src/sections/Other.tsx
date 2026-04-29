@@ -191,27 +191,27 @@ function InstagramIcon({ size = 16 }: { size?: number }) {
 const socialLinks = [
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/charlesalcebar',
+    href: 'https://www.linkedin.com/in/charles0202/',
     icon: LinkedinIcon,
     note: 'Professional profile',
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/charlesalcebar',
+    href: 'https://github.com/eywrungg',
     icon: GithubIcon,
     note: 'Projects and code',
   },
   {
     label: 'Facebook',
-    href: '',
+    href: 'https://www.facebook.com/share/1CYejf3vde/?mibextid=wwXIfr',
     icon: FacebookIcon,
-    note: 'Add profile link',
+    note: 'Connect on Facebook',
   },
   {
     label: 'Instagram',
-    href: '',
+    href: 'https://www.instagram.com/ei.ronn?igsh=MWZ0cW1tdGFldnIybg%3D%3D&utm_source=qr',
     icon: InstagramIcon,
-    note: 'Add profile link',
+    note: 'Follow on Instagram',
   },
 ] as const
 

@@ -33,7 +33,7 @@ export default function Contact() {
             Get in touch
           </a>
           <a
-            href="https://github.com/charlesalcebar"
+            href="https://github.com/eywrungg"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 border px-8 py-4 text-base font-black uppercase"

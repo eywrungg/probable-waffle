@@ -173,10 +173,10 @@ export default function ContactSheet({
                 </button>
 
                 <div className="flex items-center gap-5" style={{ color: 'var(--ink-3)' }}>
-                  <a href="https://github.com/charlesalcebar" target="_blank" rel="noopener noreferrer">
-                    <GithubIcon />
-                  </a>
-                  <a href="https://linkedin.com/in/charlesalcebar" target="_blank" rel="noopener noreferrer">
+                   <a href="https://github.com/eywrungg" target="_blank" rel="noopener noreferrer">
+                     <GithubIcon />
+                   </a>
+                   <a href="https://www.linkedin.com/in/charles0202/" target="_blank" rel="noopener noreferrer">
                     <LinkedinIcon />
                   </a>
                   <a href={`mailto:${EMAIL}`}>

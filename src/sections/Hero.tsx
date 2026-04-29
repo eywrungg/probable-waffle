@@ -103,7 +103,7 @@ export default function Hero() {
               View Projects
               <ArrowRight size={14} />
             </Button>
-            <Button href="https://github.com/charlesalcebar" external variant="outline">
+            <Button href="https://github.com/eywrungg" external variant="outline">
               <GithubIcon />
               GitHub
             </Button>
