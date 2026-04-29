@@ -1,0 +1,18 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="40" fill="#09130E"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="url(#bg)"/>
+  <rect x="96" y="96" width="1008" height="96" rx="24" fill="#13261C" stroke="#22C55E" stroke-opacity=".28"/>
+  <text x="132" y="154" fill="#E7FFF0" font-family="Arial, sans-serif" font-size="34" font-weight="700">My First Portfolio</text>
+  <text x="132" y="188" fill="#8BC9A4" font-family="Arial, sans-serif" font-size="18">HTML + CSS static website</text>
+  <rect x="96" y="240" width="468" height="360" rx="28" fill="#102018"/>
+  <rect x="596" y="240" width="508" height="360" rx="28" fill="#0C1712" stroke="#22C55E" stroke-opacity=".24"/>
+  <text x="632" y="312" fill="#F4F4F5" font-family="Arial, sans-serif" font-size="22" font-weight="700">Placeholder Preview</text>
+  <text x="632" y="354" fill="#B6B6B6" font-family="Arial, sans-serif" font-size="18">Swap this with a screenshot of your first portfolio.</text>
+  <text x="632" y="406" fill="#22C55E" font-family="Arial, sans-serif" font-size="16">public/Projects/first-portfolio-placeholder.svg</text>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="1160" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143323"/>
+      <stop offset="1" stop-color="#0B0F0D"/>
+    </linearGradient>
+  </defs>
+</svg>

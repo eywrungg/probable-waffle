@@ -1,0 +1,18 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="40" fill="#140A1C"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="url(#bg)"/>
+  <ellipse cx="246" cy="392" rx="162" ry="222" fill="#1A1124"/>
+  <ellipse cx="246" cy="392" rx="122" ry="182" fill="none" stroke="#A855F7" stroke-width="12" stroke-opacity=".62"/>
+  <ellipse cx="246" cy="392" rx="90" ry="138" fill="none" stroke="#8B5CF6" stroke-width="8" stroke-opacity=".48"/>
+  <rect x="470" y="124" width="638" height="512" rx="28" fill="#130D1A" stroke="#A855F7" stroke-opacity=".24"/>
+  <text x="508" y="192" fill="#F4F4F5" font-family="Arial, sans-serif" font-size="32" font-weight="700">Rick and Morty API</text>
+  <text x="508" y="230" fill="#D4C0EA" font-family="Arial, sans-serif" font-size="18">Laravel + Blade + TailwindCSS</text>
+  <text x="508" y="286" fill="#B6B6B6" font-family="Arial, sans-serif" font-size="18">Placeholder image for your live API explorer screenshot.</text>
+  <text x="508" y="338" fill="#A855F7" font-family="Arial, sans-serif" font-size="16">public/Projects/rick-morty-placeholder.svg</text>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="1160" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20102C"/>
+      <stop offset="1" stop-color="#0D0B10"/>
+    </linearGradient>
+  </defs>
+</svg>

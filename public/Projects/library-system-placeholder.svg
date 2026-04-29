@@ -1,0 +1,20 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="40" fill="#17110A"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="url(#bg)"/>
+  <rect x="84" y="96" width="310" height="108" rx="24" fill="#2E1F10" stroke="#F59E0B" stroke-opacity=".3"/>
+  <text x="120" y="148" fill="#F8E7C0" font-family="Arial, sans-serif" font-size="32" font-weight="700">School Library</text>
+  <text x="120" y="182" fill="#B99963" font-family="Arial, sans-serif" font-size="18">Book Borrowing System</text>
+  <rect x="84" y="248" width="470" height="116" rx="24" fill="#1E1710"/>
+  <rect x="84" y="388" width="470" height="116" rx="24" fill="#1E1710"/>
+  <rect x="84" y="528" width="470" height="116" rx="24" fill="#1E1710"/>
+  <rect x="602" y="96" width="514" height="548" rx="28" fill="#130F0B" stroke="#F59E0B" stroke-opacity=".22"/>
+  <text x="638" y="154" fill="#F4F4F5" font-family="Arial, sans-serif" font-size="22" font-weight="700">Placeholder Preview</text>
+  <text x="638" y="196" fill="#B6B6B6" font-family="Arial, sans-serif" font-size="18">Replace this with your project screenshot later.</text>
+  <text x="638" y="248" fill="#F59E0B" font-family="Arial, sans-serif" font-size="16">public/Projects/library-system-placeholder.svg</text>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="1160" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24180C"/>
+      <stop offset="1" stop-color="#0E0D0B"/>
+    </linearGradient>
+  </defs>
+</svg>
