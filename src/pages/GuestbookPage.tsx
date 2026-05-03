@@ -174,29 +174,21 @@ export default function GuestbookPage() {
   }
 
   return (
-    <main
-      className="relative mx-auto min-h-screen max-w-6xl overflow-hidden px-6 pb-24 pt-28"
-      style={{
-        backgroundImage:
-          'radial-gradient(circle at 50% 0%, rgba(139,92,246,0.12), transparent 38%), radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px)',
-        backgroundSize: 'auto, 40px 40px',
-        backgroundPosition: 'center top, center top',
-      }}
-    >
+    <main className="relative mx-auto min-h-screen max-w-6xl overflow-hidden px-6 pb-24 pt-28">
       <a href="/#other" className="inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
         <ArrowLeft size={20} />
         Back to home
       </a>
 
       <div className="mx-auto max-w-5xl pb-12 pt-14 text-center">
-        <p className="font-mono text-sm uppercase tracking-[0.18em]" style={{ color: '#8b5cf6' }}>
+        <p className="font-mono text-sm uppercase tracking-[0.18em]" style={{ color: 'var(--accent)' }}>
           The community wall
         </p>
         <h1
           className="mt-5 text-6xl font-semibold leading-[0.92] tracking-normal sm:text-7xl lg:text-8xl"
           style={{ color: 'var(--ink)', fontFamily: '"Archivo Black", "Space Grotesk", sans-serif' }}
         >
-          Leave Your <span style={{ color: '#8b5cf6' }}>Mark</span>
+          Leave Your <span style={{ color: 'var(--accent)' }}>Mark</span>
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed sm:text-2xl" style={{ color: 'var(--ink-3)' }}>
           Share your thoughts, feedback, or just say hi!
@@ -208,9 +200,9 @@ export default function GuestbookPage() {
           className="rounded-[2rem] border px-6 py-9 sm:px-8"
           style={{
             background:
-              'linear-gradient(180deg, rgba(139,92,246,0.1), rgba(255,255,255,0.02) 38%, var(--card))',
-            borderColor: 'rgba(139,92,246,0.38)',
-            boxShadow: '0 0 56px rgba(139,92,246,0.12), var(--card-shadow)',
+              'linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), rgba(255,255,255,0.02) 38%, var(--card))',
+            borderColor: 'color-mix(in srgb, var(--accent) 38%, transparent)',
+            boxShadow: '0 0 56px color-mix(in srgb, var(--accent) 14%, transparent), var(--card-shadow)',
           }}
         >
           {!guestbookConfigured ? (
@@ -230,7 +222,7 @@ export default function GuestbookPage() {
                 <div className="flex items-center gap-4">
                   <div
                     className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full text-lg font-semibold"
-                    style={{ background: 'rgba(139,92,246,0.2)', color: 'var(--ink)' }}
+                    style={{ background: 'color-mix(in srgb, var(--accent) 20%, transparent)', color: 'var(--ink)' }}
                   >
                     {user.avatar_url ? (
                       <img src={user.avatar_url} alt="" className="h-full w-full object-cover" />
@@ -389,7 +381,7 @@ export default function GuestbookPage() {
                 <div className="flex items-start gap-4">
                   <div
                     className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full text-lg font-semibold"
-                    style={{ background: 'rgba(139,92,246,0.18)', color: 'var(--ink)' }}
+                    style={{ background: 'color-mix(in srgb, var(--accent) 18%, transparent)', color: 'var(--ink)' }}
                   >
                     {entry.avatar_url ? (
                       <img src={entry.avatar_url} alt="" className="h-full w-full object-cover" />

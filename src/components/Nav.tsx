@@ -126,8 +126,8 @@ export default function Nav() {
                             className="absolute inset-0"
                             style={{
                               borderRadius: '9999px',
-                              background: '#fb923c',
-                              boxShadow: '0 0 16px 2px rgba(251,146,60,0.4)',
+                              background: 'var(--accent)',
+                              boxShadow: '0 0 16px 2px rgba(255,255,255,0.22)',
                             }}
                             transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                           />
@@ -229,8 +229,8 @@ export default function Nav() {
                       style={
                         active === link.href.slice(1)
                           ? {
-                              background: '#fb923c',
-                              boxShadow: '0 0 16px 2px rgba(251,146,60,0.4)',
+                              background: 'var(--accent)',
+                              boxShadow: '0 0 16px 2px rgba(255,255,255,0.22)',
                               color: '#000',
                             }
                           : undefined

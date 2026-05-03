@@ -70,7 +70,7 @@ function CreativeStack() {
       style={{
         height: 160,
         background:
-          'radial-gradient(circle at 50% 0%, rgba(251,146,60,0.1), transparent 38%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))',
+          'radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 38%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))',
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => {
@@ -299,7 +299,7 @@ export default function Other() {
               aria-hidden
               className="pointer-events-none absolute right-[-2.5rem] top-[-3rem] h-40 w-40 rounded-full transition-transform duration-500 group-hover:scale-110"
               style={{
-                background: 'radial-gradient(circle, rgba(251,146,60,0.24) 0%, transparent 68%)',
+                background: 'radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent) 0%, transparent 68%)',
               }}
             />
             <div className="relative">
@@ -307,9 +307,9 @@ export default function Other() {
                 className="rounded-[1.45rem] border px-5 py-6 text-center transition-transform duration-300 group-hover:-translate-y-1"
                 style={{
                   background:
-                    'linear-gradient(180deg, rgba(251,146,60,0.08), rgba(251,146,60,0.02) 36%, var(--surface))',
-                  borderColor: 'rgba(251,146,60,0.24)',
-                  boxShadow: '0 0 28px rgba(251,146,60,0.08)',
+                    'linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), color-mix(in srgb, var(--accent) 2%, transparent) 36%, var(--surface))',
+                  borderColor: 'color-mix(in srgb, var(--accent) 24%, transparent)',
+                  boxShadow: '0 0 28px color-mix(in srgb, var(--accent) 8%, transparent)',
                 }}
               >
                 <p
@@ -349,21 +349,21 @@ export default function Other() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  'radial-gradient(circle at 50% 10%, rgba(139,92,246,0.16), transparent 34%), linear-gradient(180deg, rgba(139,92,246,0.06), transparent 45%)',
+                  'radial-gradient(circle at 50% 10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%), linear-gradient(180deg, color-mix(in srgb, var(--accent) 7%, transparent), transparent 45%)',
               }}
             />
             <div className="relative">
               <div
                 className="rounded-[1.45rem] border px-5 py-6 text-center transition-transform duration-300 group-hover:-translate-y-1"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(139,92,246,0.08), var(--surface))',
-                  borderColor: 'rgba(139,92,246,0.26)',
-                  boxShadow: '0 0 28px rgba(139,92,246,0.08)',
+                  background: 'linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), var(--surface))',
+                  borderColor: 'color-mix(in srgb, var(--accent) 30%, transparent)',
+                  boxShadow: '0 0 28px color-mix(in srgb, var(--accent) 10%, transparent)',
                 }}
               >
                 <p
                   className="font-mono text-[11px] uppercase tracking-[0.18em]"
-                  style={{ color: '#8b5cf6' }}
+                  style={{ color: 'var(--accent)' }}
                 >
                   Community wall
                 </p>
@@ -371,7 +371,7 @@ export default function Other() {
                   className="mt-4 text-[clamp(1.75rem,4vw,3rem)] font-semibold leading-[0.95] tracking-tight"
                   style={{ color: 'var(--ink)' }}
                 >
-                  Leave Your <span style={{ color: '#8b5cf6' }}>Mark</span>
+                  Leave Your <span style={{ color: 'var(--accent)' }}>Mark</span>
                 </h4>
                 <p
                   className="mx-auto mt-3 max-w-md text-[0.98rem] leading-relaxed"
@@ -396,7 +396,7 @@ export default function Other() {
             aria-hidden
             className="pointer-events-none absolute right-[-4rem] top-[-4rem] h-48 w-48 rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(251,146,60,0.16), transparent 68%)',
+              background: 'radial-gradient(circle, color-mix(in srgb, var(--accent) 12%, transparent), transparent 68%)',
             }}
           />
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">

@@ -7,11 +7,9 @@ import { projects, type Project } from '../data/projects'
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
 function ImageHolder({
-  accent,
   image,
   title,
 }: {
-  accent: string
   image: string
   title: string
 }) {
@@ -19,17 +17,19 @@ function ImageHolder({
     <div
       className="relative aspect-[1.36/1] overflow-hidden rounded-[1.5rem] border bg-[#121212] sm:aspect-[1.52/1] sm:rounded-[2rem]"
       style={{
-        borderColor: 'rgba(20,20,20,0.55)',
-        boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.04)',
+        background: '#080808',
+        borderColor: 'rgba(255,255,255,0.18)',
+        boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.05)',
       }}
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        className="pointer-events-none absolute inset-0 opacity-100"
         style={{
-          background: `linear-gradient(180deg, transparent 0%, color-mix(in srgb, ${accent} 40%, transparent) 100%)`,
+          background:
+            'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 42%, rgba(255,255,255,0.08) 100%)',
         }}
       />
-      <img src={image} alt={`${title} placeholder`} className="h-full w-full object-cover object-top" />
+      <img src={image} alt={`${title} preview`} className="h-full w-full object-cover object-top" />
     </div>
   )
 }
@@ -74,7 +74,7 @@ function ProjectModal({
             className="absolute inset-0"
             style={{
               background:
-                'radial-gradient(circle at 50% 35%, rgba(251,146,60,0.08), transparent 38%), rgba(0,0,0,0.68)',
+                'radial-gradient(circle at 50% 35%, rgba(255,255,255,0.06), transparent 38%), rgba(0,0,0,0.68)',
               backdropFilter: 'blur(14px)',
             }}
             onClick={onClose}
@@ -277,12 +277,18 @@ function ProjectCard({
       <div
         className="rounded-[1.8rem] border p-2.5 sm:rounded-[2.15rem] sm:p-4"
         style={{
-          background: `linear-gradient(180deg, ${item.accent}, color-mix(in srgb, ${item.accent} 76%, #080808 24%))`,
-          borderColor: 'rgba(255,255,255,0.12)',
-          boxShadow: '0 0 0 1px rgba(255,255,255,0.03), 0 16px 42px rgba(0,0,0,0.22)',
+          background: 'linear-gradient(180deg, #1c1c1c, #080808)',
+          borderColor: 'rgba(255,255,255,0.18)',
+          boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 16px 42px rgba(0,0,0,0.34)',
         }}
       >
-        <div className="flex min-h-0 flex-col rounded-[1.55rem] border border-black/45 px-4 pb-4 pt-4 sm:min-h-[31rem] sm:rounded-[1.85rem] sm:px-7 sm:pb-7 sm:pt-7">
+        <div
+          className="flex min-h-0 flex-col rounded-[1.55rem] border px-4 pb-4 pt-4 sm:min-h-[31rem] sm:rounded-[1.85rem] sm:px-7 sm:pb-7 sm:pt-7"
+          style={{
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025))',
+            borderColor: 'rgba(255,255,255,0.16)',
+          }}
+        >
           <div className="mb-5 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-start sm:justify-between">
             <p className="max-w-none text-[0.98rem] font-medium leading-[1.6] text-white sm:max-w-[24ch] sm:text-[1.12rem]">
               {item.description}
@@ -290,7 +296,12 @@ function ProjectCard({
             <button
               type="button"
               onClick={() => onReadMore(item)}
-              className="inline-flex shrink-0 self-start items-center gap-1.5 rounded-full border border-white/12 bg-black/20 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-white/78 transition-colors hover:text-white"
+              className="inline-flex shrink-0 self-start items-center gap-1.5 rounded-full border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.16em] transition-colors hover:border-white"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                borderColor: 'rgba(255,255,255,0.72)',
+                color: '#f7f7f7',
+              }}
             >
               Read More
               <ChevronDown size={12} />
@@ -298,7 +309,7 @@ function ProjectCard({
           </div>
 
           <div className="mt-auto pt-1 sm:pt-0">
-            <ImageHolder accent={item.accent} image={item.image} title={item.title} />
+            <ImageHolder image={item.image} title={item.title} />
           </div>
         </div>
       </div>

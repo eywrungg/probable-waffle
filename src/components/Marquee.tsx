@@ -2,8 +2,8 @@ import { useRef } from 'react'
 
 const ITEMS = [
   'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vite',
-  'React Native', 'Node.js', 'PostgreSQL', 'ARCore', 'Supabase',
-  'Figma', 'Git', 'REST APIs', 'ViroReact', 'Expo',
+  'React Native', 'Node.js', 'PostgreSQL', 'Unity', 'Supabase',
+  'Figma', 'Git', 'REST APIs', 'AR Navigation', 'Expo',
   'A* Pathfinding', 'WebGPU', 'Cloudflare Workers', 'Hono',
 ]
 

@@ -6,10 +6,10 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
 const timeline = [
   {
-    year: '2024 - Present',
+    year: '2026 - Present',
     role: 'Capstone Developer',
-    org: 'SMCBI - AR Navigation System',
-    badge: 'Academic',
+    org: 'Campus AR Navigation + Mentra APK in progress',
+    badge: 'Current',
     tone: '#c96a3b',
     badgeStyle: {
       color: '#c96a3b',
@@ -18,10 +18,10 @@ const timeline = [
     },
   },
   {
-    year: '2023',
-    role: 'Frontend Developer',
-    org: 'Freelance / Contract',
-    badge: 'Freelance',
+    year: '2026',
+    role: 'App Developer',
+    org: 'PyroWatch APK, Mentra APK, and mobile project work',
+    badge: 'App',
     tone: '#4b7496',
     badgeStyle: {
       color: '#4b7496',
@@ -30,10 +30,10 @@ const timeline = [
     },
   },
   {
-    year: '2022 - 2023',
-    role: 'Open Source Contributor',
-    org: 'Personal Projects',
-    badge: 'Open Source',
+    year: '2026',
+    role: 'Arduino IoT Developer & Maker',
+    org: 'PyroWatch IoT hardware and fire safety prototype',
+    badge: 'IoT',
     tone: '#b88a42',
     badgeStyle: {
       color: '#b88a42',
@@ -42,7 +42,43 @@ const timeline = [
     },
   },
   {
-    year: '2021',
+    year: '2026',
+    role: 'Film Poster Designer',
+    org: 'Poster work for film projects using creative editing tools',
+    badge: 'Creative',
+    tone: '#8f5f78',
+    badgeStyle: {
+      color: '#8f5f78',
+      background: 'rgba(143,95,120,0.08)',
+      borderColor: 'rgba(143,95,120,0.22)',
+    },
+  },
+  {
+    year: '2025',
+    role: 'System Developer & Research Leader',
+    org: 'Research leadership, API usage, and system development',
+    badge: 'Research',
+    tone: '#7256c7',
+    badgeStyle: {
+      color: '#7256c7',
+      background: 'rgba(114,86,199,0.08)',
+      borderColor: 'rgba(114,86,199,0.22)',
+    },
+  },
+  {
+    year: '2024',
+    role: 'UI Designer, System Leader & Developer',
+    org: 'Led system planning while designing UI and building features',
+    badge: 'Leader',
+    tone: '#06b6d4',
+    badgeStyle: {
+      color: '#06b6d4',
+      background: 'rgba(6,182,212,0.08)',
+      borderColor: 'rgba(6,182,212,0.22)',
+    },
+  },
+  {
+    year: '2023',
     role: 'BS Information Technology',
     org: 'SMCBI',
     badge: 'Education',
@@ -54,11 +90,11 @@ const timeline = [
     },
   },
   {
-    year: '2019',
-    role: 'Hello World',
-    org: 'Wrote my first line of code',
+    year: '2020',
+    role: 'Hello World on Phone',
+    org: 'Wrote my first Hello World using a phone',
     badge: null,
-    tone: '#8f5f78',
+    tone: '#f59e0b',
     badgeStyle: null,
   },
 ]

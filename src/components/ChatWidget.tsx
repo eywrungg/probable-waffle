@@ -9,7 +9,7 @@ type Message = { from: 'user' | 'charles'; text: string }
 const FAQS: { match: RegExp; answer: string }[] = [
   {
     match: /stack|tech|use|tools|language/i,
-    answer: "I primarily work with React, TypeScript, Tailwind CSS, and Vite on the frontend. For backend I use Node.js and PostgreSQL, and I deploy on Vercel. I'm also deep into React Native and ARCore for mobile/AR work.",
+    answer: "I primarily work with React, TypeScript, Tailwind CSS, and Vite on the frontend. For backend I use Node.js and PostgreSQL. I'm also working with Unity for mobile/AR campus navigation.",
   },
   {
     match: /available|hire|freelance|open|work|job|internship/i,
@@ -17,11 +17,11 @@ const FAQS: { match: RegExp; answer: string }[] = [
   },
   {
     match: /ar|campus|navigation|smcbi/i,
-    answer: "CampusAR Navigator is my capstone project — a real-time AR indoor navigation app for SMCBI using ARCore, ViroReact, and A* pathfinding. It guides students to any room in under 30 seconds.",
+    answer: "Campus AR Navigation is my current project - an AR campus wayfinding app for SMCBI built with Unity.",
   },
   {
     match: /project|work|built|portfolio|shelf|pulse/i,
-    answer: "I've built CampusAR Navigator (AR navigation), Shelf (a minimal reading tracker with 40+ daily users), and Pulse Dashboard (real-time analytics for small e-commerce stores). Check the Projects section for details.",
+    answer: "I've built PyroWatch APK, Rick and Morty API, Relox Luxury Watch Store, and I'm currently building Campus AR Navigation in Unity. Check the Projects section for details.",
   },
   {
     match: /contact|email|reach|message|talk/i,

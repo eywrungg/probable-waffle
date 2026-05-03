@@ -26,11 +26,11 @@ const DEFAULT: HoverImage = {
 
 const INFO_PANEL_IMAGE: HoverImage = {
   id: 'info-panels',
-  src: '/PHOTO.jpeg',
+  src: '/Projects/SCHOOL.jpg',
   label: '',
-  objectPosition: 'center 18%',
-  scale: 1.04,
-  filter: 'brightness(0.94) contrast(1.02)',
+  objectPosition: 'center center',
+  scale: 1.02,
+  filter: 'brightness(0.88) contrast(1.04) saturate(1.05)',
 }
 
 const IMAGES: Record<number, HoverImage> = {
@@ -40,11 +40,11 @@ const IMAGES: Record<number, HoverImage> = {
   3: INFO_PANEL_IMAGE,
   4: {
     id: 'craft',
-    src: '/PHOTO.jpeg',
+    src: '/Projects/Craft.jpeg',
     label: '',
-    objectPosition: 'center 54%',
-    scale: 1.08,
-    filter: 'brightness(0.84) saturate(1.1)',
+    objectPosition: 'center center',
+    scale: 1.04,
+    filter: 'brightness(0.86) contrast(1.06) saturate(1.08)',
   },
   5: {
     id: 'location',
@@ -136,8 +136,8 @@ function Card({
 
 const HOVER_ITEMS = [
   {
-    title: 'Science Club',
-    text: "Active IT club member at St. Mary's College. Building campus navigation apps, AR systems, and embedded hardware.",
+    title: 'Harmonics Club',
+    text: "Harmonics Club member at St. Mary's College. We sing in church and during school Masses and campus gatherings.",
     key: 1,
   },
   {
@@ -147,7 +147,7 @@ const HOVER_ITEMS = [
   },
   {
     title: 'Competitions',
-    text: 'Undergraduate researcher and capstone lead. Built PyroWatch fire suppression controller and Campus AR Navigation app.',
+    text: "Currently maintaining Dean's Lister standing and academic honors while balancing research, systems, and creative work.",
     key: 3,
   },
 ] as const
@@ -367,16 +367,27 @@ export default function About() {
           onHoverKey={setHoverKey}
         >
           <h2
-            className="font-bold uppercase leading-[0.95] tracking-tight"
+            className="uppercase leading-[0.92]"
             style={{
               fontSize: 'clamp(1.6rem, 3vw, 2.3rem)',
               color: 'var(--ink)',
-              letterSpacing: '-0.01em',
+              letterSpacing: 0,
             }}
           >
-            Charles
-            <br />
-            Alcebar
+            <span className="block font-semibold" style={{ fontFamily: '"Space Grotesk", system-ui, sans-serif' }}>
+              Charles
+            </span>
+            <span
+              className="block"
+              style={{
+                fontFamily: '"Archivo Black", "Space Grotesk", sans-serif',
+                fontWeight: 900,
+                letterSpacing: 0,
+                textShadow: '0 10px 28px color-mix(in srgb, var(--ink) 16%, transparent)',
+              }}
+            >
+              Alcebar
+            </span>
           </h2>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: 'var(--ink-4)' }}>
             Fullstack Developer
@@ -507,7 +518,7 @@ export default function About() {
             <TechMarquee />
           </div>
           <p className="mb-3 mt-3 text-[0.82rem] leading-[1.45] sm:mt-auto sm:text-[0.92rem]" style={{ color: 'var(--ink-2)' }}>
-            Active hackathon competitor and science club member.
+            Harmonics Club member maintaining Dean's Lister honors.
           </p>
           <Button href="#contact" variant="outline" className="h-8 self-start px-4 text-xs sm:h-7 sm:px-3 sm:text-[11px]">
             Invite me to collaborate <ArrowRight size={12} />

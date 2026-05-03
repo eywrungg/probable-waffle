@@ -26,7 +26,14 @@ export default function App() {
       <Nav />
       <div
         className="noise interactive-bg min-h-screen pt-12 sm:pt-14"
-        style={{ background: 'var(--bg)', ['--mx' as string]: '50vw', ['--my' as string]: '50vh' }}
+        style={{
+          backgroundColor: 'var(--bg)',
+          backgroundImage: 'var(--app-bg)',
+          backgroundSize: 'var(--app-bg-size)',
+          backgroundPosition: 'var(--app-bg-position)',
+          ['--mx' as string]: '50vw',
+          ['--my' as string]: '50vh',
+        }}
         onMouseMove={(e) => {
           const el = e.currentTarget
           el.style.setProperty('--mx', `${e.clientX}px`)
@@ -37,7 +44,7 @@ export default function App() {
           aria-hidden
           className="dark-glow pointer-events-none fixed inset-0 z-0"
           style={{
-            background: 'radial-gradient(ellipse 70% 50% at 50% 40%, rgba(251,146,60,0.07) 0%, transparent 70%)',
+            background: 'none',
           }}
         />
 

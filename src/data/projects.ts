@@ -8,6 +8,9 @@ export type Project = {
   accent: string
   image: string
   href?: string
+  category?: 'Development Projects' | 'App & AR Projects' | 'Creative Works'
+  orientation?: 'landscape' | 'portrait'
+  gallery?: string[]
 }
 
 export const featuredProjects: Project[] = [
@@ -24,7 +27,8 @@ export const featuredProjects: Project[] = [
     ],
     chips: ['Laravel', 'MySQL', 'Queues', 'Email', 'Admin Panel'],
     accent: '#f59e0b',
-    image: '/Projects/library-system-placeholder.svg',
+    image: '/Projects/SMCBI Library Book Borrowing System.png',
+    category: 'Development Projects',
   },
   {
     index: '02',
@@ -39,8 +43,9 @@ export const featuredProjects: Project[] = [
     ],
     chips: ['HTML', 'CSS', 'Responsive Layout'],
     accent: '#22c55e',
-    image: '/Projects/first-portfolio-placeholder.svg',
+    image: '/Projects/Firstportfolio.png',
     href: 'https://eywrungg.github.io/ALCEBAR-portfolio/',
+    category: 'Development Projects',
   },
   {
     index: '03',
@@ -55,7 +60,9 @@ export const featuredProjects: Project[] = [
     ],
     chips: ['React', 'Laravel API', 'E-Commerce', 'REST API'],
     accent: '#38bdf8',
-    image: '/Projects/relox-placeholder.svg',
+    image: '/Projects/Relux.png',
+    href: 'https://luxury-watch-website-with-api.vercel.app/',
+    category: 'Development Projects',
   },
   {
     index: '04',
@@ -70,7 +77,8 @@ export const featuredProjects: Project[] = [
     ],
     chips: ['Laravel 11+', 'Blade', 'TailwindCSS', 'API Integration'],
     accent: '#a855f7',
-    image: '/Projects/rick-morty-placeholder.svg',
+    image: '/Projects/RICK&MORTY.png',
+    category: 'Development Projects',
   },
 ]
 
@@ -88,40 +96,28 @@ const archiveOnlyProjects: Project[] = [
     ],
     chips: ['HTML', 'Frontend', 'UI Polish', 'Forked Project'],
     accent: '#fb7185',
-    image: '/Projects/first-portfolio-placeholder.svg',
+    image: '/Projects/Frontend Enhancement Project.png',
+    category: 'Development Projects',
   },
   {
     index: '06',
     label: 'Web Game',
     title: 'Web-Based Imposter Game',
     description:
-      'A browser-based imposter party game built in TypeScript with role-based gameplay and a web-first multiplayer-style experience.',
+      'A browser-based imposter party game built in TypeScript with Gemini API support for AI-assisted prompts and role interactions.',
     highlights: [
       'Built as an interactive web game using TypeScript.',
       'Centered around imposter-style role play, deduction, and session-based game flow.',
-      'Explored game UI, state handling, and player-facing interaction design in the browser.',
+      'Integrated Gemini API features to support AI-assisted game prompts and interactions.',
     ],
-    chips: ['TypeScript', 'Game Logic', 'Web App', 'Interactive UI'],
+    chips: ['TypeScript', 'Gemini API', 'Game Logic', 'Web App'],
     accent: '#f97316',
-    image: '/Projects/rick-morty-placeholder.svg',
+    image: '/Projects/Web-Based Imposter Game.png',
+    href: 'https://web-based-imposter-game.vercel.app/',
+    category: 'Development Projects',
   },
   {
     index: '07',
-    label: 'AI Game',
-    title: 'Imposter Game with Gemini',
-    description:
-      'An imposter game variant enhanced with Gemini, blending TypeScript gameplay with AI-assisted prompts or role interactions.',
-    highlights: [
-      'Extended the imposter game concept with Gemini-powered AI behavior or content.',
-      'Combined game logic with AI-assisted interaction for a more dynamic experience.',
-      'Used as an experiment in mixing entertainment features with modern AI tooling.',
-    ],
-    chips: ['TypeScript', 'Gemini', 'AI Features', 'Game Project'],
-    accent: '#8b5cf6',
-    image: '/Projects/relox-placeholder.svg',
-  },
-  {
-    index: '08',
     label: 'API',
     title: 'Alcebar Bible API',
     description:
@@ -133,25 +129,29 @@ const archiveOnlyProjects: Project[] = [
     ],
     chips: ['PHP', 'API', 'Backend', 'Data Access'],
     accent: '#22c55e',
-    image: '/Projects/library-system-placeholder.svg',
+    image: '/Projects/SMCBI Library Book Borrowing System.png',
+    category: 'Development Projects',
+  },
+  {
+    index: '08',
+    label: 'Mobile App',
+    title: 'PyroWatch APK',
+    description:
+      'A mobile APK companion for PyroWatch, built around fire safety monitoring, manual controls, and quick access to system status.',
+    highlights: [
+      'Built as an installable Android APK for the PyroWatch fire safety project.',
+      'Designed mobile screens for monitoring, manual control, and emergency-focused interaction.',
+      'Connected the app experience to the larger PyroWatch system workflow.',
+    ],
+    chips: ['Mobile App', 'APK', 'Fire Safety', 'PyroWatch'],
+    accent: '#ef4444',
+    image: '/Projects/Pyrowatch_apk_auto.jpg',
+    category: 'App & AR Projects',
+    orientation: 'portrait',
+    gallery: ['/Projects/Pyrowatch_apk_auto.jpg', '/Projects/Pyrowatch_apk_manual.jpg'],
   },
   {
     index: '09',
-    label: 'Blade App',
-    title: 'Alcebar Fish',
-    description:
-      'A Blade-based Laravel project that continues my practice in server-rendered UI, application structure, and practical feature development.',
-    highlights: [
-      'Built with Blade templates in a Laravel-style workflow.',
-      'Focused on page rendering, layout structure, and backend-connected views.',
-      'Helped strengthen hands-on experience in PHP application development.',
-    ],
-    chips: ['Blade', 'Laravel', 'PHP', 'Server Rendered'],
-    accent: '#06b6d4',
-    image: '/Projects/library-system-placeholder.svg',
-  },
-  {
-    index: '10',
     label: 'Portfolio',
     title: 'Canva Portfolio',
     description:
@@ -163,7 +163,61 @@ const archiveOnlyProjects: Project[] = [
     ],
     chips: ['Canva', 'Portfolio', 'Published Web Page', 'Visual Design'],
     accent: '#f59e0b',
-    image: '/Projects/first-portfolio-placeholder.svg',
+    image: '/Projects/canvaportfolio.png',
+    href: 'https://alcebar-charlesarone-midtermportfolio.my.canva.site/',
+    category: 'Development Projects',
+  },
+  {
+    index: '10',
+    label: 'Current Project',
+    title: 'Campus AR Navigation',
+    description:
+      'A currently in-progress campus navigation project using AR technology in Unity to help students find rooms and campus locations.',
+    highlights: [
+      'Built around Unity-based AR navigation for campus wayfinding.',
+      'Focuses on guiding users through campus spaces with visual direction cues.',
+      'Currently being developed as an active project connected to my IT and AR learning path.',
+    ],
+    chips: ['Unity', 'AR Technology', 'Campus Navigation', 'Current Project'],
+    accent: '#38bdf8',
+    image: '/Projects/campus-ar-navigation.svg',
+    category: 'App & AR Projects',
+    orientation: 'portrait',
+  },
+  {
+    index: '11',
+    label: 'UI Design',
+    title: 'First-Year UI Design Set',
+    description:
+      'A first-year interface design set covering dashboard, login, and signup screens while practicing visual hierarchy and form layouts.',
+    highlights: [
+      'Designed dashboard, login form, and signup screens as early UI practice.',
+      'Focused on structure, spacing, and readable form presentation.',
+      'Shows the starting point of my visual design and interface layout growth.',
+    ],
+    chips: ['Dashboard', 'Login Form', 'Signup', 'UI Design'],
+    accent: '#f4f4f5',
+    image: '/Projects/dashdashboard.jpg',
+    category: 'Creative Works',
+    gallery: ['/Projects/dashdashboard.jpg', '/Projects/login-in-form.jpg', '/Projects/sign-up.jpg'],
+  },
+  {
+    index: '12',
+    label: 'Poster Design',
+    title: 'Third-Year Photoshop Posters',
+    description:
+      'Poster design work from third year, created in Photoshop with attention to composition, visual emphasis, and presentation polish.',
+    highlights: [
+      'Created poster layouts using Adobe Photoshop.',
+      'Practiced composition, typography, and visual hierarchy for event-style graphics.',
+      'Expanded my creative workflow beyond code through graphic design.',
+    ],
+    chips: ['Photoshop', 'Poster', 'Graphic Design', 'Creative Work'],
+    accent: '#f4f4f5',
+    image: '/Projects/alcebar_posterfinal.jpg',
+    category: 'Creative Works',
+    orientation: 'portrait',
+    gallery: ['/Projects/alcebar_posterfinal.jpg', '/Projects/Alcebar_CharlesArone_ChecklistPoster.jpg'],
   },
 ]
 

@@ -11,6 +11,9 @@ const groups = [
       { label: 'HTML5', mark: 'H5', color: '#e34f26' },
       { label: 'CSS3', mark: 'C3', color: '#1572b6' },
       { label: 'PHP', mark: 'PHP', color: '#777bb4' },
+      { label: 'C++', mark: 'C++', color: '#00599c' },
+      { label: 'C', mark: 'C', color: '#a8b9cc' },
+      { label: 'Python', mark: 'PY', color: '#3776ab' },
     ],
   },
   {
@@ -22,6 +25,15 @@ const groups = [
       { label: 'Vue.js', mark: 'V', color: '#42b883' },
       { label: 'Tailwind', mark: 'TW', color: '#06b6d4' },
       { label: 'React Native', mark: 'RN', color: '#61dafb' },
+    ],
+  },
+  {
+    title: 'Engines & AR',
+    items: [
+      { label: 'Unity', mark: 'U', color: '#ffffff', bg: '#111111' },
+      { label: 'ARCore', mark: 'AR', color: '#4285f4' },
+      { label: 'ARKit', mark: 'AK', color: '#f5f5f7' },
+      { label: 'ViroReact', mark: 'VR', color: '#61dafb' },
     ],
   },
   {
@@ -41,7 +53,6 @@ const groups = [
       { label: 'NPM', mark: 'N', color: '#cb3837' },
       { label: 'Playwright', mark: 'PW', color: '#45ba4b' },
       { label: 'VS Code', mark: 'VS', color: '#007acc' },
-      { label: 'Unity', mark: 'U', color: '#ffffff', bg: '#111111' },
     ],
   },
 ] as const
@@ -56,12 +67,14 @@ const creativeTools = [
 ] as const
 
 const experience = [
-  { title: 'Fullstack Developer', detail: 'Laravel, React, APIs, and polished product UI', year: '2026', tone: '#c96a3b' },
-  { title: 'Creative Editor', detail: 'Posters, video editing, photography, and reels', year: '2025', tone: '#8f5f78' },
-  { title: 'Capstone Lead', detail: 'Research, product delivery, and system design', year: '2025', tone: '#4b7496' },
-  { title: 'Hackathon Builder', detail: 'Fast prototypes under pressure', year: '2024', tone: '#7256c7' },
+  { title: 'Capstone Developer', detail: 'Currently building Campus AR Navigation and Mentra APK', year: '2026', tone: '#c96a3b' },
+  { title: 'App Developer', detail: 'Built PyroWatch APK and continuing mobile app work', year: '2026', tone: '#4b7496' },
+  { title: 'Arduino IoT Maker', detail: 'Developed PyroWatch IoT hardware and fire safety prototype', year: '2026', tone: '#b88a42' },
+  { title: 'Film Poster Designer', detail: 'Created poster designs for film projects', year: '2026', tone: '#8f5f78' },
+  { title: 'System Developer', detail: 'Research leader with API usage and system development work', year: '2025', tone: '#7256c7' },
+  { title: 'UI Designer', detail: 'System leader and developer for UI and project builds', year: '2024', tone: '#06b6d4' },
   { title: 'BS Information Technology', detail: "St. Mary's College of Bansalan", year: '2023', tone: '#5f9074' },
-  { title: 'Hello World!', detail: 'Wrote my first serious line of code', year: '2021', tone: '#b88a42' },
+  { title: 'Hello World!', detail: 'Wrote Hello World using a phone', year: '2020', tone: '#f59e0b' },
 ] as const
 
 function SkillMark({ item }: { item: { label: string; mark: string; color: string; bg?: string } }) {
