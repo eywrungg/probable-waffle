@@ -1,8 +1,33 @@
 # Charles Arone Alcebar Portfolio
 
-Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS.
+A personal portfolio website for presenting my projects, skills, achievements, creative work, and contact links. The site is built as a fast single-page React app with extra pages for the project archive, achievements, blog, and guestbook.
 
-## Local Development
+Live site:
+
+```txt
+https://eywrungg.github.io/probable-waffle/
+```
+
+## Features
+
+- Responsive portfolio layout with bento-style sections
+- Project showcase with featured projects and archive pages
+- Achievements and creative work sections
+- Guestbook page powered by Supabase
+- Smooth animations and interactive hover effects
+- GitHub Pages deployment through GitHub Actions
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Motion
+- Supabase
+- GitHub Pages
+
+## Getting Started
 
 Install dependencies:
 
@@ -10,80 +35,49 @@ Install dependencies:
 npm install
 ```
 
-Start the local dev server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Create a production build:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+Preview the production build:
 
 ```bash
 npm run preview
 ```
 
-## GitHub Pages Deployment
-
-This project is configured to deploy through **GitHub Actions**, not **Deploy from a branch**.
-
-The workflow lives at:
+## Project Structure
 
 ```txt
-.github/workflows/deploy.yml
+src/
+  components/    Reusable UI components
+  data/          Project and achievement data
+  lib/           Helpers and external service logic
+  pages/         Standalone portfolio pages
+  sections/      Main homepage sections
+public/          Static images and GitHub Pages files
 ```
 
-When changes are pushed to `master`, GitHub Actions installs dependencies, runs `npm run build`, uploads the `dist` folder, and deploys it to GitHub Pages.
+## Deployment
 
-Current Pages URL:
+This project deploys to GitHub Pages with GitHub Actions. The workflow builds the Vite app and publishes the generated `dist` folder.
 
-```txt
-https://eywrungg.github.io/probable-waffle/
-```
-
-Because the repository name is `probable-waffle`, Vite needs this base path:
+The deployed site uses the repository path `/probable-waffle/`, so `vite.config.ts` includes:
 
 ```ts
 base: '/probable-waffle/',
 ```
 
-That setting is in:
+## Author
 
-```txt
-vite.config.ts
-```
+Charles Arone Alcebar
 
-The `public/404.html` file also redirects refreshed subpages back into the Vite app, so routes like `/projects`, `/achievements`, `/guestbook`, and `/blog` work on GitHub Pages.
-
-## Using `https://eywrungg.github.io/` Instead
-
-Yes, the site can use:
-
-```txt
-https://eywrungg.github.io/
-```
-
-But GitHub only gives that root URL to a special user site repository named exactly:
-
-```txt
-eywrungg.github.io
-```
-
-To use the root URL, create or rename the repo to `eywrungg.github.io`, then update:
-
-```ts
-base: '/',
-```
-
-Also update `public/404.html` so its `base` value is empty or `/`.
-
-If this project stays in the `probable-waffle` repository, the correct GitHub Pages URL remains:
-
-```txt
-https://eywrungg.github.io/probable-waffle/
-```
+- GitHub: [eywrungg](https://github.com/eywrungg)
+- LinkedIn: [charles0202](https://www.linkedin.com/in/charles0202/)
