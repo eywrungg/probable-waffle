@@ -1,12 +1,13 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { achievements } from '../data/achievements'
+import { withBase } from '../lib/paths'
 
 export default function AchievementsPage() {
   const [hero, ...rest] = achievements
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-6 pb-24 pt-28">
-      <a href="/#other" className="inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
+      <a href={withBase('/#other')} className="inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
         <ArrowLeft size={20} />
         Back to home
       </a>

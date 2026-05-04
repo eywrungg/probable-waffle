@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import ProjectsArchive from './pages/ProjectsArchive'
 import AchievementsPage from './pages/AchievementsPage'
 import GuestbookPage from './pages/GuestbookPage'
+import { currentPathname } from './lib/paths'
 
 const Projects = lazy(() => import('./sections/Projects'))
 const Skills = lazy(() => import('./sections/Skills'))
@@ -15,7 +16,7 @@ const Blog = lazy(() => import('./sections/Blog'))
 const Divider = () => <div style={{ borderTop: '1px solid var(--border)' }} />
 
 export default function App() {
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
+  const pathname = currentPathname()
   const isProjectsPage = pathname === '/projects'
   const isAchievementsPage = pathname === '/achievements'
   const isGuestbookPage = pathname === '/guestbook'

@@ -19,6 +19,7 @@ import {
   type GuestbookSession,
   type GuestbookUser,
 } from '../lib/guestbook'
+import { withBase } from '../lib/paths'
 
 function GithubIcon() {
   return (
@@ -175,7 +176,7 @@ export default function GuestbookPage() {
 
   return (
     <main className="relative mx-auto min-h-screen max-w-6xl overflow-hidden px-6 pb-24 pt-28">
-      <a href="/#other" className="inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
+      <a href={withBase('/#other')} className="inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
         <ArrowLeft size={20} />
         Back to home
       </a>

@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { allProjects } from '../data/projects'
+import { withBase } from '../lib/paths'
 
 const projectGroups = [
   {
@@ -21,7 +22,7 @@ export default function ProjectsArchive() {
     <main className="mx-auto min-h-screen max-w-6xl px-6 pb-20 pt-28">
       <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
         <a
-          href="/#projects"
+          href={withBase('/#projects')}
           className="inline-flex items-center gap-2 font-medium"
           style={{ color: 'var(--ink-2)' }}
         >

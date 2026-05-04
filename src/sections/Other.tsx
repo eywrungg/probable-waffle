@@ -8,6 +8,7 @@ import {
   PenTool,
 } from 'lucide-react'
 import Section from '../components/Section'
+import { withBase } from '../lib/paths'
 
 function Card({
   children,
@@ -294,7 +295,7 @@ export default function Other() {
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
         <Card className="group relative overflow-hidden p-5 sm:p-6 lg:col-span-6">
-          <a href="/achievements" className="relative block">
+          <a href={withBase('/achievements')} className="relative block">
             <div
               aria-hidden
               className="pointer-events-none absolute right-[-2.5rem] top-[-3rem] h-40 w-40 rounded-full transition-transform duration-500 group-hover:scale-110"
@@ -343,7 +344,7 @@ export default function Other() {
         </Card>
 
         <Card className="group relative overflow-hidden p-5 sm:p-6 lg:col-span-6">
-          <a href="/guestbook" className="block">
+          <a href={withBase('/guestbook')} className="block">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0"
@@ -413,7 +414,7 @@ export default function Other() {
             </div>
 
             <a
-              href="/blog"
+              href={withBase('/blog')}
               className="group/blog flex shrink-0 items-center justify-between gap-6 rounded-[1.1rem] border px-4 py-3 font-semibold transition-transform duration-300 hover:-translate-y-0.5"
               style={{
                 background: '#050505',

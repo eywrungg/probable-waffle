@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      const base = '/probable-waffle'
+      const pathname = window.location.pathname.replace(/\/+$/, '')
+      const route = pathname.startsWith(base) ? pathname.slice(base.length) || '/' : '/'
+      window.location.replace(`${base}/?redirect=${encodeURIComponent(route)}${window.location.hash}`)
+    </script>
+  </head>
+  <body></body>
+</html>

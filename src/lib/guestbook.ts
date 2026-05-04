@@ -1,3 +1,5 @@
+import { withBase } from './paths'
+
 export type AuthProvider = 'github'
 
 export type GuestbookEntry = {
@@ -139,7 +141,7 @@ export function signInWithGuestbookProvider(provider: AuthProvider) {
     throw new Error('Guestbook is not configured yet')
   }
 
-  const redirectTo = `${window.location.origin}/guestbook`
+  const redirectTo = `${window.location.origin}${withBase('/guestbook')}`
   const authUrl = new URL(`${supabaseUrl}/auth/v1/authorize`)
   authUrl.searchParams.set('provider', provider)
   authUrl.searchParams.set('redirect_to', redirectTo)

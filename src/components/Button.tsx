@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react'
+import { withBase } from '../lib/paths'
 
 type Variant = 'primary' | 'ghost' | 'outline'
 
@@ -33,6 +34,6 @@ export default function Button({
   const cls = `${base} ${variants[variant]} ${disabled ? 'opacity-40 pointer-events-none' : ''} ${className}`
   const ext = external ? { target: '_blank', rel: 'noopener noreferrer' } : {}
 
-  if (href) return <a href={href} className={cls} {...ext}>{children}</a>
+  if (href) return <a href={withBase(href)} className={cls} {...ext}>{children}</a>
   return <button onClick={onClick} className={cls} disabled={disabled}>{children}</button>
 }

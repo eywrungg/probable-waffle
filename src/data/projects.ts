@@ -1,3 +1,5 @@
+import { withBase } from '../lib/paths'
+
 export type Project = {
   index: string
   label: string
@@ -221,6 +223,14 @@ const archiveOnlyProjects: Project[] = [
   },
 ]
 
-export const allProjects: Project[] = [...featuredProjects, ...archiveOnlyProjects]
+function withProjectAssets(project: Project): Project {
+  return {
+    ...project,
+    image: withBase(project.image),
+    gallery: project.gallery?.map((image) => withBase(image)),
+  }
+}
 
-export const projects = featuredProjects
+export const allProjects: Project[] = [...featuredProjects, ...archiveOnlyProjects].map(withProjectAssets)
+
+export const projects = featuredProjects.map(withProjectAssets)

@@ -4,6 +4,7 @@ import { Sun, Moon, Menu, X, Calendar } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import Button from './Button'
 import ContactSheet from './ContactSheet'
+import { currentPathname, withBase } from '../lib/paths'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#about' },
@@ -17,7 +18,7 @@ const SECTION_IDS = ['about', 'projects', 'skills', 'other', 'contact']
 
 export default function Nav() {
   const { theme, toggle } = useTheme()
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
+  const pathname = currentPathname()
   const isProjectsPage = pathname === '/projects'
   const isOtherPage = pathname === '/achievements' || pathname === '/guestbook' || pathname === '/blog'
   const [active, setActive] = useState(
@@ -72,7 +73,7 @@ export default function Nav() {
         if (isProjectsPage) {
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else {
-          window.location.href = '/#projects'
+          window.location.href = withBase('/#projects')
         }
         return
       }
@@ -82,12 +83,12 @@ export default function Nav() {
         if (isOtherPage) {
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else {
-          window.location.href = '/#other'
+          window.location.href = withBase('/#other')
         }
         return
       }
 
-      window.location.href = `/${href}`
+      window.location.href = withBase(`/${href}`)
       return
     }
 

@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Button from '../components/Button'
 import EmblaPortraitCarousel from '../components/EmblaPortraitCarousel'
 import { BrandIcon } from '../lib/brandIcons'
+import { withBase } from '../lib/paths'
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
@@ -408,7 +409,7 @@ export default function About() {
               {CENTER_IMAGE_LAYERS.map((image) => (
                 <img
                   key={image.id}
-                  src={image.src}
+                  src={withBase(image.src)}
                   alt=""
                   className="absolute inset-0 z-10 h-full w-full object-cover"
                   style={{
@@ -541,7 +542,10 @@ export default function About() {
             My passions provide the discipline and focus I need to grow.
           </p>
           <div className="mt-3 sm:mt-2">
-            <EmblaPortraitCarousel slides={REAL_SLIDES} options={{ loop: true }} />
+            <EmblaPortraitCarousel
+              slides={REAL_SLIDES.map((slide) => ({ ...slide, src: withBase(slide.src) }))}
+              options={{ loop: true }}
+            />
           </div>
           <p className="mt-3 text-[0.82rem] leading-[1.45] sm:text-[0.92rem]" style={{ color: 'var(--ink-2)' }}>
             Mastering body and mind is my path to excellence.

@@ -1,3 +1,5 @@
+import { withBase } from '../lib/paths'
+
 export type Achievement = {
   id: string
   eyebrow: string
@@ -49,4 +51,7 @@ export const achievements: Achievement[] = [
     accent: '#22c55e',
     image: '/Projects/Pyrowatch_apk_manual.jpg',
   },
-]
+].map((achievement) => ({
+  ...achievement,
+  image: withBase(achievement.image),
+}))

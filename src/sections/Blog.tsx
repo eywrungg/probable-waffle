@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight, Clock3 } from 'lucide-react'
 import Section from '../components/Section'
+import { withBase } from '../lib/paths'
 
 const posts = [
   {
@@ -25,7 +26,7 @@ const posts = [
 export default function Blog() {
   return (
     <Section id="blog" className="py-28 px-6 max-w-5xl mx-auto">
-      <a href="/#other" className="mb-10 inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
+      <a href={withBase('/#other')} className="mb-10 inline-flex items-center gap-2 text-lg" style={{ color: 'var(--ink-2)' }}>
         <ArrowLeft size={20} />
         Back to home
       </a>
