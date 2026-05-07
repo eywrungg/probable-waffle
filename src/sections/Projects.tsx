@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { ArrowUpRight, ChevronDown, X } from 'lucide-react'
 import Section from '../components/Section'
 import { projects, type Project } from '../data/projects'
+import { withBase } from '../lib/paths'
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
@@ -352,7 +353,7 @@ export default function Projects() {
 
         <div className="mt-16 flex justify-center">
           <a
-            href="/projects"
+            href={withBase('/projects')}
             className="group inline-flex items-center gap-3 text-center"
             style={{
               color: 'var(--ink)',

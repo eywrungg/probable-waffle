@@ -1,6 +1,6 @@
 # Charles Arone Alcebar Portfolio
 
-A personal portfolio website for presenting my projects, skills, achievements, creative work, and contact links. The site is built as a fast single-page React app with extra pages for the project archive, achievements, blog, and guestbook.
+A personal portfolio website for showcasing my development projects, technical skills, achievements, creative work, and contact links. It is built as a modern React app with interactive sections, project previews, and supporting pages for archives, achievements, blog posts, and a guestbook.
 
 Live site:
 
@@ -10,12 +10,14 @@ https://eywrungg.github.io/probable-waffle/
 
 ## Features
 
-- Responsive portfolio layout with bento-style sections
-- Project showcase with featured projects and archive pages
-- Achievements and creative work sections
-- Guestbook page powered by Supabase
-- Smooth animations and interactive hover effects
-- GitHub Pages deployment through GitHub Actions
+- Responsive portfolio homepage
+- Bento-style profile and project sections
+- Featured projects and full project archive
+- Achievements page
+- Blog page
+- Guestbook page with Supabase support
+- Animated transitions and hover interactions
+- Deployment support for GitHub Pages and Vercel
 
 ## Tech Stack
 
@@ -25,7 +27,6 @@ https://eywrungg.github.io/probable-waffle/
 - Tailwind CSS
 - Motion
 - Supabase
-- GitHub Pages
 
 ## Getting Started
 
@@ -53,27 +54,15 @@ Preview the production build:
 npm run preview
 ```
 
-## Project Structure
-
-```txt
-src/
-  components/    Reusable UI components
-  data/          Project and achievement data
-  lib/           Helpers and external service logic
-  pages/         Standalone portfolio pages
-  sections/      Main homepage sections
-public/          Static images and GitHub Pages files
-```
-
 ## Deployment
 
-This project deploys to GitHub Pages with GitHub Actions. The workflow builds the Vite app and publishes the generated `dist` folder.
+The project can be deployed to Vercel with the normal Vite build command:
 
-The deployed site uses the repository path `/probable-waffle/`, so `vite.config.ts` includes:
-
-```ts
-base: '/probable-waffle/',
+```bash
+npm run build
 ```
+
+GitHub Pages deployment is handled by GitHub Actions. The workflow builds the app with the `/probable-waffle/` base path and publishes the generated `dist` folder.
 
 ## Author
 
