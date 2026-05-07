@@ -15,6 +15,7 @@ import {
   listGuestbookEntries,
   signInWithGuestbookProvider,
   signOutGuestbook,
+  guestbookMessageMaxLength,
   type GuestbookEntry,
   type GuestbookSession,
   type GuestbookUser,
@@ -130,7 +131,7 @@ export default function GuestbookPage() {
 
     try {
       const entry = await createGuestbookEntry({
-        message: message.trim(),
+        message: message.trim().slice(0, guestbookMessageMaxLength),
         user,
         session,
       })
@@ -155,7 +156,7 @@ export default function GuestbookPage() {
     try {
       const entry = await createAnonymousGuestbookEntry({
         name: anonymousName,
-        message: anonymousMessage.trim(),
+        message: anonymousMessage.trim().slice(0, guestbookMessageMaxLength),
       })
       setEntries((prev) => [entry, ...prev])
       setAnonymousMessage('')
@@ -255,6 +256,7 @@ export default function GuestbookPage() {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                maxLength={guestbookMessageMaxLength}
                 placeholder="Leave a thoughtful message..."
                 rows={5}
                 className="mt-6 w-full rounded-[1.1rem] border px-4 py-4 outline-none"
@@ -331,6 +333,7 @@ export default function GuestbookPage() {
                 <textarea
                   value={anonymousMessage}
                   onChange={(e) => setAnonymousMessage(e.target.value)}
+                  maxLength={guestbookMessageMaxLength}
                   placeholder="Leave an anonymous note..."
                   rows={4}
                   className="w-full rounded-[1.1rem] border px-4 py-4 outline-none"

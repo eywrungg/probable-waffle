@@ -34,8 +34,31 @@ const supabaseKey =
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? import.meta.env.VITE_SUPABASE_ANON_KEY
 const sessionKey = 'portfolio_guestbook_session'
 const anonymousNameKey = 'portfolio_guestbook_anonymous_name'
+export const guestbookMessageMaxLength = 500
 
 export const guestbookConfigured = Boolean(supabaseUrl && supabaseKey)
+
+function cleanText(value: string, maxLength: number) {
+  return value.trim().slice(0, maxLength)
+}
+
+function cleanOptionalText(value: string | undefined, maxLength: number) {
+  const cleaned = value ? cleanText(value, maxLength) : ''
+  return cleaned || null
+}
+
+function cleanAvatarUrl(value: string | undefined) {
+  if (!value || value.length > 500) return null
+
+  try {
+    const url = new URL(value)
+    return url.protocol === 'https:' && url.hostname === 'avatars.githubusercontent.com'
+      ? url.toString()
+      : null
+  } catch {
+    return null
+  }
+}
 
 function getPublicHeaders() {
   if (!supabaseKey) {
@@ -205,7 +228,7 @@ export async function getGuestbookUser(session: GuestbookSession) {
     name: profileName(data),
     username: metadata.user_name || metadata.preferred_username || metadata.name,
     avatar_url: metadata.avatar_url || metadata.picture,
-    provider: data.app_metadata?.provider,
+    provider: data.app_metadata?.provider || 'github',
   } as GuestbookUser
 }
 
@@ -215,7 +238,7 @@ export async function listGuestbookEntries() {
   const fullSelect =
     'id,user_id,name,username,avatar_url,provider,message,role,created_at'
   const response = await fetch(
-    `${supabaseUrl}/rest/v1/guestbook_entries?select=${fullSelect}&order=created_at.desc`,
+    `${supabaseUrl}/rest/v1/guestbook_entries?select=${fullSelect}&order=created_at.desc&limit=50`,
     { headers: getPublicHeaders() },
   )
 
@@ -224,7 +247,7 @@ export async function listGuestbookEntries() {
   }
 
   const legacyResponse = await fetch(
-    `${supabaseUrl}/rest/v1/guestbook_entries?select=id,name,message,role,created_at&order=created_at.desc`,
+    `${supabaseUrl}/rest/v1/guestbook_entries?select=id,name,message,role,created_at&order=created_at.desc&limit=50`,
     { headers: getPublicHeaders() },
   )
 
@@ -252,12 +275,12 @@ export async function createGuestbookEntry(input: {
     },
     body: JSON.stringify({
       user_id: input.user.id,
-      name: input.user.name,
-      username: input.user.username || null,
-      avatar_url: input.user.avatar_url || null,
-      provider: input.user.provider || null,
-      role: input.user.provider || null,
-      message: input.message,
+      name: cleanText(input.user.name || 'Guest', 80),
+      username: cleanOptionalText(input.user.username, 80),
+      avatar_url: cleanAvatarUrl(input.user.avatar_url),
+      provider: cleanOptionalText(input.user.provider, 40),
+      role: cleanOptionalText(input.user.provider, 40),
+      message: cleanText(input.message, guestbookMessageMaxLength),
     }),
   })
 
@@ -290,7 +313,7 @@ export async function createAnonymousGuestbookEntry(input: {
       avatar_url: null,
       provider: 'anonymous',
       role: 'anonymous',
-      message: input.message,
+      message: cleanText(input.message, guestbookMessageMaxLength),
     }),
   })
 
